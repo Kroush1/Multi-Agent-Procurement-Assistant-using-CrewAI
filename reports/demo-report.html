@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procurement report: Business laptop for developers</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f4f4f1; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --line: #e1e0d9;
+  --accent: #2a78d6; --good: #006300; --good-bg: #e6f3e6; --warn-bg: #fdf3d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #121211; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --line: #2c2c2a;
+    --accent: #3987e5; --good: #0ca30c; --good-bg: #12260f; --warn-bg: #322710;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 16px/1.55 "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; }
+h2 { font-size: 20px; margin: 40px 0 12px; }
+h3 { font-size: 16px; margin: 0 0 4px; }
+p { margin: 0 0 10px; max-width: 75ch; }
+ul { margin: 0; padding-inline-start: 20px; }
+li { margin-bottom: 4px; max-width: 75ch; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+.muted { color: var(--ink-2); }
+.small { font-size: 14px; }
+.demo { background: var(--warn-bg); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.pick { border-inline-start: 5px solid var(--good); margin-top: 24px; }
+.pick .title { font-size: 20px; font-weight: 600; }
+.facts { display: flex; flex-wrap: wrap; gap: 12px 36px; margin: 14px 0; }
+.facts dt { font-size: 13px; color: var(--ink-2); }
+.facts dd { margin: 0; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+td.num, th.num { text-align: end; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.name { min-width: 200px; }
+tr.best td { background: var(--good-bg); }
+.tag { white-space: nowrap; font-weight: 600; }
+.bars { display: grid; gap: 12px; }
+.bar { display: grid; grid-template-columns: minmax(90px, 28%) 1fr; gap: 12px; align-items: center;
+  position: relative; }
+.bar .label { font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track { display: flex; align-items: center; gap: 8px; border-inline-start: 1px solid var(--line);
+  padding-inline-end: 76px; }
+.fill { height: 18px; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
+.val { font-size: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; margin-inline-end: -76px; }
+.tip { display: none; position: absolute; inset-inline-start: 30%; bottom: 100%; z-index: 2;
+  max-width: 320px; background: var(--ink); color: var(--page); border-radius: 6px;
+  padding: 8px 12px; font-size: 13px; }
+.bar:hover .tip, .bar:focus .tip { display: block; }
+.bar:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+@media (max-width: 560px) { .bar { grid-template-columns: 1fr; gap: 4px; } }
+@media print {
+  .card, .scroll, tr { break-inside: avoid; }
+  .fill, tr.best td { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<main>
+<div class="demo"><strong>Demo data.</strong> Every product, website and price below is
+invented to show how the system works. Do not use this report for a purchase.</div>
+
+<header>
+  <h1 dir="auto">Procurement report: Business laptop for developers</h1>
+  <p class="muted">Prepared for Nile Tech Solutions, 25 November 2026, 06:26</p>
+</header>
+
+<section class="card pick">
+  <h3 class="muted">Recommended purchase</h3>
+  <div class="title" dir="auto"><a href="https://store-a.example/orion-workbook-14" rel="noopener noreferrer">Orion WorkBook 14</a></div>
+  <dl class="facts">
+    <div><dt>Unit price</dt><dd>38,500 EGP</dd></div>
+    <div><dt>Order of 10</dt><dd>385,000 EGP</dd></div>
+    <div><dt>Total score</dt><dd>100.0 / 100</dd></div>
+    <div><dt>Website</dt><dd>store-a.example</dd></div>
+    <div><dt>Warranty</dt><dd dir="auto">2 years</dd></div>
+  </dl>
+  <p dir="auto">Buy the Orion WorkBook 14 from store-a.example: it meets every requirement at the lowest eligible price.</p>
+</section>
+
+<h2>Executive summary</h2>
+<p dir="auto">Five offers from four websites were compared. Two of them meet every must-have, are in stock and fit the budget.</p>
+
+<h2>The request</h2>
+<dl class="facts">
+  <div><dt>Quantity</dt><dd>10</dd></div>
+  <div><dt>Unit budget</dt><dd>45,000 EGP</dd></div>
+  <div><dt>Offers compared</dt><dd>5</dd></div>
+  <div><dt>Websites</dt><dd>4</dd></div>
+</dl>
+
+<h2>Market overview</h2>
+<p dir="auto">In-budget laptops with 16 GB RAM or more cost between 38,500 and 42,900 EGP; the cheaper model has only 8 GB RAM.</p>
+
+<h2>Unit price by offer (EGP)</h2>
+<div class="card bars" role="list">
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Vega Slim 13<br><span class="muted">store-c.example</span></span>
+    <span class="track">
+      <span class="fill" style="width: 51.9%"></span>
+      <span class="val">31,900</span>
+    </span>
+    <span class="tip"><strong>31,900 EGP</strong><br>Vega Slim 13<br>store-c.example, score 70.1</span>
+  </div>
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Orion WorkBook 14<br><span class="muted">store-a.example</span></span>
+    <span class="track">
+      <span class="fill" style="width: 62.6%"></span>
+      <span class="val">38,500</span>
+    </span>
+    <span class="tip"><strong>38,500 EGP</strong><br>Orion WorkBook 14<br>store-a.example, score 100.0</span>
+  </div>
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Orion WorkBook 14<br><span class="muted">store-c.example</span></span>
+    <span class="track">
+      <span class="fill" style="width: 65.0%"></span>
+      <span class="val">39,990</span>
+    </span>
+    <span class="tip"><strong>39,990 EGP</strong><br>Orion WorkBook 14<br>store-c.example, score 97.8</span>
+  </div>
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Lyra ProBook 15<br><span class="muted">store-b.example</span></span>
+    <span class="track">
+      <span class="fill" style="width: 69.8%"></span>
+      <span class="val">42,900</span>
+    </span>
+    <span class="tip"><strong>42,900 EGP</strong><br>Lyra ProBook 15<br>store-b.example, score 83.4</span>
+  </div>
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Altair Studio 16<br><span class="muted">store-d.example</span></span>
+    <span class="track">
+      <span class="fill" style="width: 100.0%"></span>
+      <span class="val">61,500</span>
+    </span>
+    <span class="tip"><strong>61,500 EGP</strong><br>Altair Studio 16<br>store-d.example, score 77.6</span>
+  </div>
+</div>
+
+<h2>Ranking</h2>
+<div class="scroll">
+<table>
+  <thead><tr>
+    <th class="num">Rank</th><th>Product</th><th>Website</th><th class="num">Unit price (EGP)</th>
+    <th class="num">Price</th><th class="num">Specs</th><th class="num">Value</th><th class="num">Total</th><th>Status</th>
+  </tr></thead>
+  <tbody>
+  <tr class="best">
+    <td class="num">1</td>
+    <td class="name" dir="auto"><a href="https://store-a.example/orion-workbook-14" rel="noopener noreferrer">Orion WorkBook 14</a></td>
+    <td>store-a.example</td>
+    <td class="num">38,500</td>
+    <td class="num">100.0</td>
+    <td class="num">100.0</td>
+    <td class="num">100.0</td>
+    <td class="num"><strong>100.0</strong></td>
+    <td><span class="tag">✓ Eligible</span>
+</td>
+  </tr>
+  <tr>
+    <td class="num">2</td>
+    <td class="name" dir="auto"><a href="https://store-b.example/lyra-probook-15" rel="noopener noreferrer">Lyra ProBook 15</a></td>
+    <td>store-b.example</td>
+    <td class="num">42,900</td>
+    <td class="num">89.7</td>
+    <td class="num">83.3</td>
+    <td class="num">74.8</td>
+    <td class="num"><strong>83.4</strong></td>
+    <td><span class="tag">✓ Eligible</span>
+</td>
+  </tr>
+  <tr>
+    <td class="num">–</td>
+    <td class="name" dir="auto"><a href="https://store-c.example/orion-workbook-14" rel="noopener noreferrer">Orion WorkBook 14</a></td>
+    <td>store-c.example</td>
+    <td class="num">39,990</td>
+    <td class="num">96.3</td>
+    <td class="num">100.0</td>
+    <td class="num">96.3</td>
+    <td class="num"><strong>97.8</strong></td>
+    <td><span class="tag">✕ Not eligible</span>
+<br><span class="muted" dir="auto">Out of stock</span></td>
+  </tr>
+  <tr>
+    <td class="num">–</td>
+    <td class="name" dir="auto"><a href="https://store-d.example/altair-studio-16" rel="noopener noreferrer">Altair Studio 16</a></td>
+    <td>store-d.example</td>
+    <td class="num">61,500</td>
+    <td class="num">62.6</td>
+    <td class="num">100.0</td>
+    <td class="num">62.6</td>
+    <td class="num"><strong>77.6</strong></td>
+    <td><span class="tag">✕ Not eligible</span>
+<br><span class="muted" dir="auto">Over budget</span></td>
+  </tr>
+  <tr>
+    <td class="num">–</td>
+    <td class="name" dir="auto"><a href="https://store-c.example/vega-slim-13" rel="noopener noreferrer">Vega Slim 13</a></td>
+    <td>store-c.example</td>
+    <td class="num">31,900</td>
+    <td class="num">100.0</td>
+    <td class="num">50.0</td>
+    <td class="num">60.3</td>
+    <td class="num"><strong>70.1</strong></td>
+    <td><span class="tag">✕ Not eligible</span>
+<br><span class="muted" dir="auto">Must-have not met: 16 GB RAM or more</span></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<p class="muted small" style="margin-top: 10px">Scores run from 0 to 100. Total = 35% price (cheapest eligible ÷ this price)
++ 40% specs (share of requirements met, must-haves count double)
++ 25% value (specs per EGP, relative to the best eligible offer).</p>
+
+<h2>Requirement check</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Requirement</th><th dir="auto" style="white-space: normal; min-width: 130px">Orion WorkBook 14<br><span class="small" style="font-weight: 400">store-a.example</span></th><th dir="auto" style="white-space: normal; min-width: 130px">Lyra ProBook 15<br><span class="small" style="font-weight: 400">store-b.example</span></th><th dir="auto" style="white-space: normal; min-width: 130px">Orion WorkBook 14<br><span class="small" style="font-weight: 400">store-c.example</span></th><th dir="auto" style="white-space: normal; min-width: 130px">Altair Studio 16<br><span class="small" style="font-weight: 400">store-d.example</span></th><th dir="auto" style="white-space: normal; min-width: 130px">Vega Slim 13<br><span class="small" style="font-weight: 400">store-c.example</span></th></tr></thead>
+  <tbody>
+  <tr>
+    <td class="name" dir="auto">16 GB RAM or more<br><span class="muted small">Must have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">16 GB</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">32 GB</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">16 GB</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">32 GB</span></td>
+    <td><span class="tag">✕ Not met</span><br><span class="muted" dir="auto">8 GB</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">512 GB SSD or more<br><span class="muted small">Must have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">512 GB SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">1 TB SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">512 GB SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">1 TB SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">512 GB SSD</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Full HD screen or better<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">14 inch 1920x1200</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">15.6 inch 2560x1440</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">14 inch 1920x1200</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">16 inch 3840x2400</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">13.3 inch 1920x1080</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Warranty of 2 years or more<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">2 years</span></td>
+    <td><span class="tag">✕ Not met</span><br><span class="muted" dir="auto">1 year</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">2 years</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">3 years</span></td>
+    <td><span class="tag">✕ Not met</span><br><span class="muted" dir="auto">1 year</span></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Comparison notes</h2>
+<ul><li dir="auto">Orion WorkBook 14 is cheaper and has a 2-year warranty.</li><li dir="auto">Lyra ProBook 15 doubles the RAM and storage for 4,400 EGP more.</li><li dir="auto">The same Orion costs more on store-c.example and is out of stock there.</li></ul>
+
+
+<h2>Product details</h2>
+<div class="cols">
+  <div class="card">
+    <h3 dir="auto">Orion WorkBook 14</h3>
+    <p class="muted small">store-a.example,
+      in stock,
+      warranty: 2 years</p>
+<strong>Pros</strong><ul><li dir="auto">512 GB SSD storage</li><li dir="auto">2 years warranty</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">RAM: 16 GB</li><li dir="auto">Storage: 512 GB SSD</li><li dir="auto">Screen: 14 inch 1920x1200</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">Lyra ProBook 15</h3>
+    <p class="muted small">store-b.example,
+      in stock,
+      warranty: 1 year</p>
+<strong>Pros</strong><ul><li dir="auto">1 TB SSD storage</li><li dir="auto">1 year warranty</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">RAM: 32 GB</li><li dir="auto">Storage: 1 TB SSD</li><li dir="auto">Screen: 15.6 inch 2560x1440</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">Orion WorkBook 14</h3>
+    <p class="muted small">store-c.example,
+      out of stock,
+      warranty: 2 years</p>
+<strong>Pros</strong><ul><li dir="auto">512 GB SSD storage</li><li dir="auto">2 years warranty</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">RAM: 16 GB</li><li dir="auto">Storage: 512 GB SSD</li><li dir="auto">Screen: 14 inch 1920x1200</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">Altair Studio 16</h3>
+    <p class="muted small">store-d.example,
+      in stock,
+      warranty: 3 years</p>
+<strong>Pros</strong><ul><li dir="auto">1 TB SSD storage</li><li dir="auto">3 years warranty</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">RAM: 32 GB</li><li dir="auto">Storage: 1 TB SSD</li><li dir="auto">Screen: 16 inch 3840x2400</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">Vega Slim 13</h3>
+    <p class="muted small">store-c.example,
+      in stock,
+      warranty: 1 year</p>
+<strong>Pros</strong><ul><li dir="auto">512 GB SSD storage</li><li dir="auto">1 year warranty</li></ul>
+<strong>Cons</strong><ul><li dir="auto">Only 8 GB RAM</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">RAM: 8 GB</li><li dir="auto">Storage: 512 GB SSD</li><li dir="auto">Screen: 13.3 inch 1920x1080</li></ul>
+    </details>
+  </div>
+</div>
+
+<div class="cols">
+  <section><h2>Risks</h2><ul><li dir="auto">Stock for the full quantity has not been confirmed.</li></ul>
+</section>
+  <section><h2>Next steps</h2><ul><li dir="auto">Ask store-a.example for a written quote for 10 units.</li><li dir="auto">Confirm delivery time and warranty terms.</li></ul>
+</section>
+</div>
+
+
+<footer class="small muted">
+  <p>Sources read for this report. Prices and stock change; confirm them before ordering.</p>
+  <ul>
+    <li><a href="https://store-a.example/orion-workbook-14" rel="noopener noreferrer">https://store-a.example/orion-workbook-14</a> (ScrapeGraph)</li>
+    <li><a href="https://store-b.example/lyra-probook-15" rel="noopener noreferrer">https://store-b.example/lyra-probook-15</a> (ScrapeGraph)</li>
+    <li><a href="https://store-c.example/orion-workbook-14" rel="noopener noreferrer">https://store-c.example/orion-workbook-14</a> (ScrapeGraph)</li>
+    <li><a href="https://store-d.example/altair-studio-16" rel="noopener noreferrer">https://store-d.example/altair-studio-16</a> (ScrapeGraph)</li>
+    <li><a href="https://store-c.example/vega-slim-13" rel="noopener noreferrer">https://store-c.example/vega-slim-13</a> (ScrapeGraph)</li>
+  </ul>
+  <p style="margin-top: 12px">Searches: business laptop 16GB RAM 512GB SSD price Egypt; buy developer laptop Egypt EGP; لاب توب للمبرمجين سعر مصر</p>
+</footer>
+</main>
+</body>
+</html>

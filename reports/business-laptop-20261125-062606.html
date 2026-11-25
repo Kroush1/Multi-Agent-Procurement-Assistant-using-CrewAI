@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Procurement report: business laptop</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f4f4f1; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --line: #e1e0d9;
+  --accent: #2a78d6; --good: #006300; --good-bg: #e6f3e6; --warn-bg: #fdf3d9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #121211; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --line: #2c2c2a;
+    --accent: #3987e5; --good: #0ca30c; --good-bg: #12260f; --warn-bg: #322710;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 16px/1.55 "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", sans-serif; }
+main { max-width: 1080px; margin: 0 auto; padding: 32px 20px 56px; }
+h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; text-wrap: balance; }
+h2 { font-size: 20px; margin: 40px 0 12px; }
+h3 { font-size: 16px; margin: 0 0 4px; }
+p { margin: 0 0 10px; max-width: 75ch; }
+ul { margin: 0; padding-inline-start: 20px; }
+li { margin-bottom: 4px; max-width: 75ch; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+.muted { color: var(--ink-2); }
+.small { font-size: 14px; }
+.demo { background: var(--warn-bg); padding: 12px 16px; border-radius: 8px; margin-bottom: 24px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+.pick { border-inline-start: 5px solid var(--good); margin-top: 24px; }
+.pick .title { font-size: 20px; font-weight: 600; }
+.facts { display: flex; flex-wrap: wrap; gap: 12px 36px; margin: 14px 0; }
+.facts dt { font-size: 13px; color: var(--ink-2); }
+.facts dd { margin: 0; font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.scroll { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 10px 12px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--line); }
+tr:last-child td { border-bottom: 0; }
+th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+td.num, th.num { text-align: end; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.name { min-width: 200px; }
+tr.best td { background: var(--good-bg); }
+.tag { white-space: nowrap; font-weight: 600; }
+.bars { display: grid; gap: 12px; }
+.bar { display: grid; grid-template-columns: minmax(90px, 28%) 1fr; gap: 12px; align-items: center;
+  position: relative; }
+.bar .label { font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.track { display: flex; align-items: center; gap: 8px; border-inline-start: 1px solid var(--line);
+  padding-inline-end: 76px; }
+.fill { height: 18px; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
+.val { font-size: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; margin-inline-end: -76px; }
+.tip { display: none; position: absolute; inset-inline-start: 30%; bottom: 100%; z-index: 2;
+  max-width: 320px; background: var(--ink); color: var(--page); border-radius: 6px;
+  padding: 8px 12px; font-size: 13px; }
+.bar:hover .tip, .bar:focus .tip { display: block; }
+.bar:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+@media (max-width: 560px) { .bar { grid-template-columns: 1fr; gap: 4px; } }
+@media print {
+  .card, .scroll, tr { break-inside: avoid; }
+  .fill, tr.best td { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+<main>
+
+<header>
+  <h1 dir="auto">Procurement report: business laptop</h1>
+  <p class="muted">Prepared for Nile Tech Solutions, 25 November 2026, 06:26</p>
+</header>
+
+<section class="card pick">
+  <h3 class="muted">Recommended purchase</h3>
+  <div class="title" dir="auto"><a href="https://forte-tech.com/products/dell-latitude-5510-laptop" rel="noopener noreferrer">Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop</a></div>
+  <dl class="facts">
+    <div><dt>Unit price</dt><dd>51,350 EGP</dd></div>
+    <div><dt>Order of 10</dt><dd>513,500 EGP</dd></div>
+    <div><dt>Total score</dt><dd>95.0 / 100</dd></div>
+    <div><dt>Website</dt><dd>forte-tech.com</dd></div>
+    <div><dt>Warranty</dt><dd dir="auto">3 years</dd></div>
+  </dl>
+  <p dir="auto">Purchase 10 units of Dell Latitude 5510 (ID P1) at 51,350 EGP each, total 513,500 EGP, satisfying all requirements and staying under budget.</p>
+</section>
+
+<h2>Executive summary</h2>
+<p dir="auto">The ranking identifies Dell Latitude 5510 (ID P1) as the only eligible business laptop meeting RAM, storage, warranty and local delivery requirements within the 60,000 EGP per unit budget.</p>
+
+<h2>The request</h2>
+<dl class="facts">
+  <div><dt>Quantity</dt><dd>10</dd></div>
+  <div><dt>Unit budget</dt><dd>60,000 EGP</dd></div>
+  <div><dt>Offers compared</dt><dd>3</dd></div>
+  <div><dt>Websites</dt><dd>3</dd></div>
+</dl>
+
+<h2>Market overview</h2>
+<p dir="auto">Three offers were found. P1 (Dell) is local, fully eligible, priced at 51,350 EGP/unit with a 3‑year warranty. P3 (HP) meets specs and warranty but is out of stock. P2 (Dell via Noon) lacks verified pricing and stock information, making it ineligible.</p>
+
+<h2>Unit price by offer (EGP)</h2>
+<div class="card bars" role="list">
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">HP ProBook 460 G11 Business Laptop Intel Core Ultra 7 155U 512GB SSD 16GB Ram Intel Graphics 16&#34; Inch WUXGA - Pike silver<br><span class="muted">egyptlaptop.com</span></span>
+    <span class="track">
+      <span class="fill" style="width: 90.9%"></span>
+      <span class="val">46,666</span>
+    </span>
+    <span class="tip"><strong>46,666 EGP</strong><br>HP ProBook 460 G11 Business Laptop Intel Core Ultra 7 155U 512GB SSD 16GB Ram Intel Graphics 16&#34; Inch WUXGA - Pike silver<br>egyptlaptop.com, score 100.0</span>
+  </div>
+  <div class="bar" role="listitem" tabindex="0">
+    <span class="label" dir="auto">Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop<br><span class="muted">forte-tech.com</span></span>
+    <span class="track">
+      <span class="fill" style="width: 100.0%"></span>
+      <span class="val">51,350</span>
+    </span>
+    <span class="tip"><strong>51,350 EGP</strong><br>Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop<br>forte-tech.com, score 95.0</span>
+  </div>
+</div>
+
+<h2>Ranking</h2>
+<div class="scroll">
+<table>
+  <thead><tr>
+    <th class="num">Rank</th><th>Product</th><th>Website</th><th class="num">Unit price (EGP)</th>
+    <th class="num">Price</th><th class="num">Specs</th><th class="num">Value</th><th class="num">Total</th><th>Status</th>
+  </tr></thead>
+  <tbody>
+  <tr class="best">
+    <td class="num">1</td>
+    <td class="name" dir="auto"><a href="https://forte-tech.com/products/dell-latitude-5510-laptop" rel="noopener noreferrer">Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop</a></td>
+    <td>forte-tech.com</td>
+    <td class="num">51,350</td>
+    <td class="num">100.0</td>
+    <td class="num">87.5</td>
+    <td class="num">100.0</td>
+    <td class="num"><strong>95.0</strong></td>
+    <td><span class="tag">✓ Eligible</span>
+</td>
+  </tr>
+  <tr>
+    <td class="num">–</td>
+    <td class="name" dir="auto"><a href="https://egyptlaptop.com/laptops/hp-probook-460-g11-business-laptop-intel-core-ultra-7-155u-512gb-ssd-16gb-ram-intel-graphics-16-inch-wuxga-pike-silver" rel="noopener noreferrer">HP ProBook 460 G11 Business Laptop Intel Core Ultra 7 155U 512GB SSD 16GB Ram Intel Graphics 16&#34; Inch WUXGA - Pike silver</a></td>
+    <td>egyptlaptop.com</td>
+    <td class="num">46,666</td>
+    <td class="num">100.0</td>
+    <td class="num">100.0</td>
+    <td class="num">100.0</td>
+    <td class="num"><strong>100.0</strong></td>
+    <td><span class="tag">✕ Not eligible</span>
+<br><span class="muted" dir="auto">Out of stock</span></td>
+  </tr>
+  <tr>
+    <td class="num">–</td>
+    <td class="name" dir="auto"><a href="https://www.noon.com/egypt-en/latitude-5510-upgraded-version-laptop-with-15-6-inch-full-hd-antiglare-display-core-i5-10210u-processor-16gb-ram-512gb-ssd-intel-uhd-graphics-windows-11-pro-with-dell-original-bag-back-english-arabic-silver/N53372966A/p" rel="noopener noreferrer">Latitude 5510 (Upgraded Version) Laptop With 15.6-Inch Full HD Antiglare Display, Core i5-10210U Processor/16GB RAM/512GB SSD/Intel UHD Graphics/Windows 11 Pro With Dell Original Bag Back English/Arabic Silver</a></td>
+    <td>noon.com</td>
+    <td class="num">–</td>
+    <td class="num">–</td>
+    <td class="num">75.0</td>
+    <td class="num">–</td>
+    <td class="num"><strong>–</strong></td>
+    <td><span class="tag">✕ Not eligible</span>
+<br><span class="muted" dir="auto">No verified price on the page</span><br><span class="muted" dir="auto">Out of stock</span></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<p class="muted small" style="margin-top: 10px">Scores run from 0 to 100. Total = 35% price (cheapest eligible ÷ this price)
++ 40% specs (share of requirements met, must-haves count double)
++ 25% value (specs per EGP, relative to the best eligible offer).</p>
+
+<h2>Requirement check</h2>
+<div class="scroll">
+<table>
+  <thead><tr><th>Requirement</th><th dir="auto" style="white-space: normal; min-width: 130px">Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop<br><span class="small" style="font-weight: 400">forte-tech.com</span></th><th dir="auto" style="white-space: normal; min-width: 130px">HP ProBook 460 G11 Business Laptop Intel Core Ultra 7 155U 512GB SSD 16GB Ram Intel Graphics 16&#34; Inch WUXGA - Pike silver<br><span class="small" style="font-weight: 400">egyptlaptop.com</span></th><th dir="auto" style="white-space: normal; min-width: 130px">Latitude 5510 (Upgraded Version) Laptop With 15.6-Inch Full HD Antiglare Display, Core i5-10210U Processor/16GB RAM/512GB SSD/Intel UHD Graphics/Windows 11 Pro With Dell Original Bag Back English/Arabic Silver<br><span class="small" style="font-weight: 400">noon.com</span></th></tr></thead>
+  <tbody>
+  <tr>
+    <td class="name" dir="auto">16 GB RAM or more<br><span class="muted small">Must have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Memory: 16GB DDR4</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">RAM: 16 GB DDR5-5600 MT/s (1 x 16 GB)</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">RAM: 16GB</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">512 GB SSD or more<br><span class="muted small">Must have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Storage: 512GB PCIe NVMe M.2 SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Storage Details: 512 GB PCIe® NVMe™ SSD</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Internal Memory: 512 GB</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Full HD screen<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display: 15.6″ Full HD (1920 × 1080), anti-glare</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display: 40.6 cm (16&#34;) diagonal, WUXGA (1920 x 1200), IPS</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display Resolution: 1080x1920</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Full HD screen (1920x1080) or better<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display: 15.6″ Full HD (1920 × 1080)</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display Resolution: 1920 x 1200 (better than 1920x1080)</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Display Resolution: 1080x1920</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Intel Core i5 11th generation or equivalent AMD Ryzen 5 or better<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✕ Not met</span><br><span class="muted" dir="auto">Processor: Intel Core i7-10610U vPro (10th generation)</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Processor: Intel Core Ultra 7 155U (newer generation, performance comparable or better than i5 11th gen)</span></td>
+    <td><span class="tag">✕ Not met</span><br><span class="muted" dir="auto">CPU Speed: 4.2 GHz (Core i5-10210U, 10th generation)</span></td>
+  </tr>
+  <tr>
+    <td class="name" dir="auto">Official warranty of at least one year<br><span class="muted small">Nice to have</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Warranty: 3 years</span></td>
+    <td><span class="tag">✓ Met</span><br><span class="muted" dir="auto">Warranty: 1 year</span></td>
+    <td><span class="tag">? Unknown</span><br><span class="muted" dir="auto">Warranty: 1 Year Seller Warranty (not specified as official manufacturer warranty)</span></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>Comparison notes</h2>
+<ul><li dir="auto">P1 offers local delivery, official 3‑year warranty, and meets all mandatory specs at 51,350 EGP/unit.</li><li dir="auto">P3 provides a higher‑resolution display and newer processor but is currently out of stock.</li><li dir="auto">P2 has missing price data and uncertain warranty legitimacy, plus older processor.</li></ul>
+
+
+<h2>Product details</h2>
+<div class="cols">
+  <div class="card">
+    <h3 dir="auto">Dell Latitude 5510 Core i7-10610U 15.6″ Business Laptop</h3>
+    <p class="muted small">Forte-Tech,
+      in stock,
+      warranty: 3 years</p>
+<strong>Pros</strong><ul><li dir="auto">Meets RAM and storage requirements</li><li dir="auto">Full HD display</li><li dir="auto">Official 3‑year warranty</li><li dir="auto">In stock from local seller</li></ul>
+<strong>Cons</strong><ul><li dir="auto">Processor is 10th‑gen, not the required 11th‑gen i5</li><li dir="auto">Higher price</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">Processor: Intel Core i7-10610U vPro, 4 cores / 8 threads, up to 4.9 GHz, 8MB cache</li><li dir="auto">Graphics: Intel UHD Graphics (integrated)</li><li dir="auto">Memory: 16GB DDR4</li><li dir="auto">Storage: 512GB PCIe NVMe M.2 SSD</li><li dir="auto">Display: 15.6″ Full HD (1920 × 1080), anti-glare</li><li dir="auto">Keyboard: Full-size with numeric keypad</li><li dir="auto">Security: Fingerprint reader, TPM 2.0</li><li dir="auto">Ports: USB-C, USB-A 3.2, HDMI, RJ-45 Ethernet, microSD, audio jack</li><li dir="auto">Wireless: Wi-Fi and Bluetooth</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">HP ProBook 460 G11 Business Laptop Intel Core Ultra 7 155U 512GB SSD 16GB Ram Intel Graphics 16&#34; Inch WUXGA - Pike silver</h3>
+    <p class="muted small">Egyptlaptop,
+      out of stock,
+      warranty: 1 year</p>
+<strong>Pros</strong><ul><li dir="auto">Meets all key specifications</li><li dir="auto">Higher‑resolution 1920x1200 display</li><li dir="auto">Modern processor comparable to or better than i5 11th gen</li><li dir="auto">Includes official 1‑year warranty</li></ul>
+<strong>Cons</strong><ul><li dir="auto">Not in stock</li><li dir="auto">Price may be higher than budget options</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">Brand: HP</li><li dir="auto">Product Name: ProBook 460 G11</li><li dir="auto">Product number: A23C9EA</li><li dir="auto">Colors: Pike silver</li><li dir="auto">Processor: Intel Core Ultra 7 155U</li><li dir="auto">Processor Details: up to 4.8 GHz with Intel® Turbo Boost Technology, 12 MB L3 cache, 12 cores, 14 threads</li><li dir="auto">RAM: 16 GB DDR5-5600 MT/s (1 x 16 GB)</li><li dir="auto">Storage Details: 512 GB PCIe® NVMe™ SSD</li><li dir="auto">Video Graphics: Intel® Graphics™</li><li dir="auto">Display: 40.6 cm (16&#34;) diagonal, WUXGA (1920 x 1200), IPS, anti-glare, 300 nits, 45% NTSC</li><li dir="auto">Display Resolution: 1920 x 1200</li><li dir="auto">Keyboard: HP Premium Keyboard - spill-resistant, backlit keyboard with numeric keypad</li><li dir="auto">Webcam: 1080p FHD camera</li></ul>
+    </details>
+  </div>
+  <div class="card">
+    <h3 dir="auto">Latitude 5510 (Upgraded Version) Laptop With 15.6-Inch Full HD Antiglare Display, Core i5-10210U Processor/16GB RAM/512GB SSD/Intel UHD Graphics/Windows 11 Pro With Dell Original Bag Back English/Arabic Silver</h3>
+    <p class="muted small">noon.com,
+      out of stock,
+      warranty: 1 Year Seller Warranty</p>
+<strong>Pros</strong><ul><li dir="auto">Meets RAM and storage specs</li><li dir="auto">Full HD screen</li><li dir="auto">Comes with a 1‑year warranty</li></ul>
+<strong>Cons</strong><ul><li dir="auto">Processor is older 10th‑gen i5</li><li dir="auto">Warranty may not be official</li><li dir="auto">Out of stock and seller information missing</li></ul>
+    <details><summary>All specifications</summary>
+      <ul><li dir="auto">Battery Life: 14hr</li><li dir="auto">RAM: 16GB</li><li dir="auto">Internal Memory: 512 GB</li><li dir="auto">Display Resolution: 1080x1920</li><li dir="auto">Color: Silver</li><li dir="auto">Screen Size: 15.6 in</li><li dir="auto">Features: Eye Care</li><li dir="auto">Keyboard Language: English/Arabic</li><li dir="auto">CPU Speed: 4.2 GHz</li><li dir="auto">Upgraded Version: RAM/SSD/Windows upgraded by seller</li><li dir="auto">Device Thickness: 14.9mm</li><li dir="auto">Weight: 3.1lbs / 1.4kg</li></ul>
+    </details>
+  </div>
+</div>
+
+<div class="cols">
+  <section><h2>Risks</h2><ul><li dir="auto">Processor is 10th‑gen i7, not the explicitly required 11th‑gen i5; may affect performance expectations.</li><li dir="auto">Higher price than the minimum budget ceiling but still within the per‑unit limit.</li><li dir="auto">Future stock availability not guaranteed; confirm stock before order.</li></ul>
+</section>
+  <section><h2>Next steps</h2><ul><li dir="auto">Contact the seller on forte-tech.com to confirm current stock for 10 units.</li><li dir="auto">Obtain a formal quote and verify the 3‑year official warranty terms.</li><li dir="auto">Process purchase order through Nile Tech Solutions procurement system.</li></ul>
+</section>
+</div>
+
+<h2>Data quality notes</h2>
+<ul><li dir="auto">Ignored a URL that no search returned: https://raneen.com/ar/electronics/computers/laptops-notebooks</li><li dir="auto">noon.com was read with Tavily Extract because ScrapeGraph could not open it: HTTP 504</li><li dir="auto">Could not scrape jumia.com.eg: not a page of one product</li><li dir="auto">Could not scrape asus.com: not a page of one product</li><li dir="auto">Could not scrape amazon.eg: not a page of one product</li></ul>
+
+
+<footer class="small muted">
+  <p>Sources read for this report. Prices and stock change; confirm them before ordering.</p>
+  <ul>
+    <li><a href="https://forte-tech.com/products/dell-latitude-5510-laptop" rel="noopener noreferrer">https://forte-tech.com/products/dell-latitude-5510-laptop</a> (ScrapeGraph)</li>
+    <li><a href="https://egyptlaptop.com/laptops/hp-probook-460-g11-business-laptop-intel-core-ultra-7-155u-512gb-ssd-16gb-ram-intel-graphics-16-inch-wuxga-pike-silver" rel="noopener noreferrer">https://egyptlaptop.com/laptops/hp-probook-460-g11-business-laptop-intel-core-ultra-7-155u-512gb-ssd-16gb-ram-intel-graphics-16-inch-wuxga-pike-silver</a> (ScrapeGraph)</li>
+    <li><a href="https://www.noon.com/egypt-en/latitude-5510-upgraded-version-laptop-with-15-6-inch-full-hd-antiglare-display-core-i5-10210u-processor-16gb-ram-512gb-ssd-intel-uhd-graphics-windows-11-pro-with-dell-original-bag-back-english-arabic-silver/N53372966A/p" rel="noopener noreferrer">https://www.noon.com/egypt-en/latitude-5510-upgraded-version-laptop-with-15-6-inch-full-hd-antiglare-display-core-i5-10210u-processor-16gb-ram-512gb-ssd-intel-uhd-graphics-windows-11-pro-with-dell-original-bag-back-english-arabic-silver/N53372966A/p</a> (Tavily Extract)</li>
+  </ul>
+  <p style="margin-top: 12px">Searches: business laptop 16 GB RAM 512 GB SSD Egypt; لابتوب عمل 16 جيجابايت رام 512 جيجابايت س س د مصر; Dell Latitude 5510 16GB 512GB laptop Egypt; Lenovo ThinkPad E15 16GB 512GB Egypt price; Asus ExpertBook B5 16GB 512GB Egypt; Jumia Egypt Asus ExpertBook B5 16GB 512GB; HP ProBook 460 G11 16GB 512GB Egypt; Asus ExpertBook B5 16GB 512GB Egypt price site:jumia.com.eg; Lenovo ThinkPad E15 16GB 512GB site:jumia.com.eg</p>
+</footer>
+</main>
+</body>
+</html>

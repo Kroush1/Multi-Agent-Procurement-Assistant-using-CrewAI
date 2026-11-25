@@ -1,0 +1,29 @@
+# Company context: injected into every agent's prompt. Edit it for your company.
+# (Nile Tech Solutions is a fictional example.)
+name: Nile Tech Solutions
+industry: Software and IT services
+country: Egypt
+# Tavily "country" boost (lowercase English name). Empty = no boost.
+search_country: egypt
+size: 120 employees
+currency: EGP
+about: >
+  A software house that equips its engineering, support and finance teams
+  with office and IT hardware bought from local suppliers and online stores.
+
+procurement_policy:
+  - Prefer sellers that deliver inside the company's country.
+  - Prefer an official warranty of at least one year.
+  - Never recommend used or refurbished items unless explicitly requested.
+  - Every recommendation must link to the page the price came from.
+
+# Leave empty to search the whole web; add domains to restrict the search.
+preferred_websites: []
+excluded_websites: [facebook.com, youtube.com, pinterest.com, reddit.com]
+
+# Weights of the final score. They are normalised, so they need not add up to 1.
+weights: {price: 0.35, specs: 0.40, value: 0.25}
+
+# Optional: value of 1 unit of a foreign currency in `currency`, e.g. {USD: 48.0}.
+# A product priced in a currency not listed here is shown but not recommended.
+exchange_rates: {}
